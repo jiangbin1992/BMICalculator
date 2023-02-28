@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context="com.expresstemplate.bmicalc.DetailPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="YOUR BODY MASS INDEX (BMI)"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relAnswer"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/relHeader"
+            android:background="@drawable/bmi_text_bg">
+
+            <TextView
+                android:id="@+id/txtAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="New Text"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="New Text"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relAnalysis"
+            android:layout_width="fill_parent"
+            android:layout_height="205dp"
+            android:layout_below="@+id/relAnswer"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/txtunderWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Underweight"
+                android:textColor="@color/blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtUnderweightAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="82dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/txtunderWeight"
+                android:text="hello"
+                android:textColor="@color/blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtunderWeight"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Normal"
+                android:textColor="@color/green"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtNormalAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtUnderweightAns"
+                android:layout_marginLeft="126dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/txtNormal"
+                android:text="18.5 - 25"
+                android:textColor="@color/green"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtOverWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNormal"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Overweight"
+                android:textColor="@color/yellow"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtOverweightAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNormalAns"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/txtOverWeight"
+                android:text="25 - 30"
+                android:textColor="@color/yellow"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtObese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOverWeight"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Obese"
+                android:textColor="@color/orange"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtObeseAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOverweightAns"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/txtObese"
+                android:text="30 - 35"
+                android:textColor="@color/orange"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtSeObese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtObese"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Severely Obese"
+                android:textColor="@color/pink"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtSeObeseAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtObeseAns"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/txtSeObese"
+                android:text="35 - 40"
+                android:textColor="@color/pink"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtVsb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSeObese"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Very Severely Obese"
+                android:textColor="@color/red"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtVsbAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSeObeseAns"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/txtVsb"
+                android:text="hi"
+                android:textColor="@color/red"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relExtraText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relAnalysis"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/txtExtraText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="OMG! Yoy are in a very"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relButton"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/relExtraText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/save" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/btnSave"
+                android:background="@drawable/btn_back2" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/btnSave"
+                android:background="@drawable/share" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/relCalculator"
+        android:background="@color/white">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+</LinearLayout>

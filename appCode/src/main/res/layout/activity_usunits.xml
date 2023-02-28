@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.expresstemplate.bmicalc.USUnits"
+    android:background="@drawable/bg">
+
+
+    <RelativeLayout
+        android:id="@+id/relTitile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bmi_text_bg">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US Units"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relContain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relTitile"
+        android:layout_above="@+id/ad">
+
+
+        <RelativeLayout
+            android:id="@+id/relInsertValue"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+                    <TextView
+                        android:id="@+id/txtAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGE"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <RelativeLayout
+                        android:id="@+id/relEditAge"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/txtAge"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/editAge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/year"
+                            android:hint="Enter age in years"
+                            android:inputType="number"
+                            android:paddingLeft="45dp"
+                            android:textCursorDrawable="@drawable/color_cursor"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HEIGHT"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/relEditAge"
+                        android:layout_centerHorizontal="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relEditHeight"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/txtHeight"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relEditMidlLine"
+                            android:layout_width="2dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relFeet"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_toLeftOf="@+id/relEditMidlLine">
+
+                            <EditText
+                                android:id="@+id/editFeet"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@drawable/feet"
+                                android:hint="feet"
+                                android:inputType="number"
+                                android:paddingLeft="45dp"
+                                android:textCursorDrawable="@drawable/color_cursor"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relInches"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@+id/relEditMidlLine">
+
+                            <EditText
+                                android:id="@+id/editInches"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@drawable/inch"
+                                android:hint="inch"
+                                android:inputType="number"
+                                android:paddingLeft="45dp"
+                                android:textCursorDrawable="@drawable/color_cursor"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEIGHT"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/relEditHeight"
+                        android:layout_marginTop="8dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relEditWeight"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/txtWeight"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/editWeight"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/kg"
+                            android:hint="Enter weight in lbs"
+                            android:inputType="number"
+                            android:paddingLeft="45dp"
+                            android:textCursorDrawable="@drawable/color_cursor"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GENDER"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/relEditWeight"
+                        android:layout_marginTop="8dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relGender"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtGender"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relMidlLineGender"
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relMale"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignRight="@+id/relMidlLineGender"
+                            android:background="@drawable/selected1">
+
+                            <TextView
+                                android:id="@+id/txtMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MALE"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relFemale"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignLeft="@+id/relMidlLineGender"
+                            android:background="@drawable/un_selected2">
+
+                            <TextView
+                                android:id="@+id/txtFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FEMALE"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"/>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/relCalculator"
+        android:background="@color/white">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_id">
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relCalculator"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg">
+
+        <TextView
+            android:id="@+id/txtCalcute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALCULATE NOW !"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

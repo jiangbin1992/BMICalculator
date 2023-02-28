@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.expresstemplate.bmicalc.History">
+
+    <RelativeLayout
+        android:id="@+id/relTitile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bmi_text_bg">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="BMI HISTORY"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relTitile"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relData"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/relTopLine">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"></ListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relButton"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:text="Clear"
+                android:textColor="@color/lightblue" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relTopLine"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:layout_above="@+id/relButton"
+            android:background="@color/darkgray">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ad1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/relButton"
+            android:background="@color/white">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relText"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relTitile"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No data available."
+            android:textColor="@color/darkgray"
+            android:textSize="20dp" />
+
+        <!--<RelativeLayout
+            android:id="@+id/ad"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_key">
+            </com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
