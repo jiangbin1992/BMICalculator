@@ -9,7 +9,7 @@ android {
     buildToolsVersion "32.0.0"
 
     defaultConfig {
-        applicationId "com.auto.respond.one.pro"
+        applicationId "com.bmi.calculator.one.pro"
         minSdk 21
         targetSdk 32
         versionCode 1
