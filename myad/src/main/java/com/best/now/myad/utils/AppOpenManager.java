@@ -4,14 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.util.Log;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.appopen.AppOpenAd;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 import java.util.Date;
 
@@ -31,9 +24,9 @@ import static com.best.now.myad.utils.PublicHelperKt.loadRewardedAds;
  */
 public class AppOpenManager implements LifecycleObserver, Application.ActivityLifecycleCallbacks {
     private static final String LOG_TAG = "AppOpenManager";
-    private AppOpenAd appOpenAd = null;
-
-    private AppOpenAd.AppOpenAdLoadCallback loadCallback;
+//    private AppOpenAd appOpenAd = null;
+//
+//    private AppOpenAd.AppOpenAdLoadCallback loadCallback;
 
     private  Application myApplication;
     private Activity currentActivity;
@@ -48,14 +41,14 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         this.myApplication = myApplication;
         this.myApplication.registerActivityLifecycleCallbacks(this);
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
-        MobileAds.initialize(myApplication.getApplicationContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
-                loadInterstitialAd(myApplication.getApplicationContext());
-                loadRewardedAds(myApplication.getApplicationContext());
-                fetchAd();
-            }
-        });
+//        MobileAds.initialize(myApplication.getApplicationContext(), new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+//                loadInterstitialAd(myApplication.getApplicationContext());
+//                loadRewardedAds(myApplication.getApplicationContext());
+//                fetchAd();
+//            }
+//        });
     }
 
     /**
@@ -63,51 +56,51 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
      */
     public void fetchAd() {
         // Have unused ad, no need to fetch another.
-        if (isAdAvailable()) {
-            return;
-        }
+//        if (isAdAvailable()) {
+//            return;
+//        }
 
-        loadCallback =
-                new AppOpenAd.AppOpenAdLoadCallback() {
-                    /**
-                     * Called when an app open ad has loaded.
-                     *
-                     * @param ad the loaded app open ad.
-                     */
-                    @Override
-                    public void onAdLoaded(AppOpenAd ad) {
-                        AppOpenManager.this.appOpenAd = ad;
-                        AppOpenManager.this.loadTime = (new Date()).getTime();
-                        if (isFirst){
-                            showAdIfAvailable();
-                            isFirst = false;
-                        }
-                    }
-
-                    /**
-                     * Called when an app open ad has failed to load.
-                     *
-                     * @param loadAdError the error.
-                     */
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        // Handle the error.
-                        loadAdError.toString();
-                    }
-
-                };
-        AdRequest request = getAdRequest();
-        AppOpenAd.load(
-                myApplication, Constant.AD_APP_OPEN_ID, request,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
+//        loadCallback =
+//                new AppOpenAd.AppOpenAdLoadCallback() {
+//                    /**
+//                     * Called when an app open ad has loaded.
+//                     *
+//                     * @param ad the loaded app open ad.
+//                     */
+//                    @Override
+//                    public void onAdLoaded(AppOpenAd ad) {
+//                        AppOpenManager.this.appOpenAd = ad;
+//                        AppOpenManager.this.loadTime = (new Date()).getTime();
+//                        if (isFirst){
+//                            showAdIfAvailable();
+//                            isFirst = false;
+//                        }
+//                    }
+//
+//                    /**
+//                     * Called when an app open ad has failed to load.
+//                     *
+//                     * @param loadAdError the error.
+//                     */
+//                    @Override
+//                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+//                        // Handle the error.
+//                        loadAdError.toString();
+//                    }
+//
+//                };
+//        AdRequest request = getAdRequest();
+//        AppOpenAd.load(
+//                myApplication, Constant.AD_APP_OPEN_ID, request,
+//                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
     }
 
     /**
      * Creates and returns ad request.
      */
-    private AdRequest getAdRequest() {
-        return new AdRequest.Builder().build();
-    }
+//    private AdRequest getAdRequest() {
+//        return new AdRequest.Builder().build();
+//    }
 
     /**
      * Utility method to check if ad was loaded more than n hours ago.
@@ -121,9 +114,9 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     /**
      * Utility method that checks if ad exists and can be shown.
      */
-    public boolean isAdAvailable() {
-        return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
-    }
+//    public boolean isAdAvailable() {
+//        return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
+//    }
 
     @Override
     public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle bundle) {
@@ -168,31 +161,31 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         // and an ad is available.
 //       if (!PublicHelper2.Companion.isPurchased2()){
         if (true){
-            if (!isShowingAd && isAdAvailable()) {
-                Log.d(LOG_TAG, "Will show ad.");
+//            if (!isShowingAd && isAdAvailable()) {
+//                Log.d(LOG_TAG, "Will show ad.");
 
-                FullScreenContentCallback fullScreenContentCallback =
-                        new FullScreenContentCallback() {
-                            @Override
-                            public void onAdDismissedFullScreenContent() {
-                                // Set the reference to null so isAdAvailable() returns false.
-                                AppOpenManager.this.appOpenAd = null;
-                                isShowingAd = false;
-                                fetchAd();
-                            }
-
-                            @Override
-                            public void onAdFailedToShowFullScreenContent(AdError adError) {
-                            }
-
-                            @Override
-                            public void onAdShowedFullScreenContent() {
-                                isShowingAd = true;
-                            }
-                        };
-
-                appOpenAd.setFullScreenContentCallback(fullScreenContentCallback);
-                appOpenAd.show(currentActivity);
+//                FullScreenContentCallback fullScreenContentCallback =
+//                        new FullScreenContentCallback() {
+//                            @Override
+//                            public void onAdDismissedFullScreenContent() {
+//                                // Set the reference to null so isAdAvailable() returns false.
+//                                AppOpenManager.this.appOpenAd = null;
+//                                isShowingAd = false;
+//                                fetchAd();
+//                            }
+//
+//                            @Override
+//                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+//                            }
+//
+//                            @Override
+//                            public void onAdShowedFullScreenContent() {
+//                                isShowingAd = true;
+//                            }
+//                        };
+//
+//                appOpenAd.setFullScreenContentCallback(fullScreenContentCallback);
+//                appOpenAd.show(currentActivity);
 
             } else {
                 Log.d(LOG_TAG, "Can not show ad.");
@@ -204,9 +197,9 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     /**
      * LifecycleObserver methods
      */
-    @OnLifecycleEvent(ON_START)
-    public void onStart() {
-        showAdIfAvailable();
-        Log.d(LOG_TAG, "onStart");
-    }
-}
+//    @OnLifecycleEvent(ON_START)
+//    public void onStart() {
+//        showAdIfAvailable();
+//        Log.d(LOG_TAG, "onStart");
+//    }
+//}

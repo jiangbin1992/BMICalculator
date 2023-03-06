@@ -80,13 +80,13 @@
             android:layout_above="@+id/relButton"
             android:background="@color/white">
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView1"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                android:id="@+id/adView1"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                ads:adSize="BANNER"-->
+<!--                ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>-->
 
         </RelativeLayout>
 

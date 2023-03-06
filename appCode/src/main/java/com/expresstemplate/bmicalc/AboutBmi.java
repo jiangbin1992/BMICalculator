@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
 
 public class AboutBmi extends Activity {
 
@@ -33,12 +33,12 @@ public class AboutBmi extends Activity {
         statusBar_Color();
 
         ad = (RelativeLayout) findViewById(R.id.ad);
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+//        AdView mAdView = (AdView) findViewById(R.id.adView);
 
         if (getResources().getString(R.string.ads_visibility).equals("yes")) {
             ad.setVisibility(View.VISIBLE);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
+//            AdRequest adRequest = new AdRequest.Builder().build();
+//            mAdView.loadAd(adRequest);
         } else {
             ad.getLayoutParams().height = 0;
         }
