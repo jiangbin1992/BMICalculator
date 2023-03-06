@@ -51,7 +51,10 @@ fun isRewarded(context: Activity):Boolean{
     }
     return rewarded>=3
 }
-
+fun enable(context: Activity):Boolean{
+    val rewarded = context.getSpValue("isRewarded",0)
+    return rewarded>=3
+}
 private var pop: AdsRewardsPop? = null
 fun showRewardsPop(context: Activity,count:Int) {
     pop = AdsRewardsPop(context,count){

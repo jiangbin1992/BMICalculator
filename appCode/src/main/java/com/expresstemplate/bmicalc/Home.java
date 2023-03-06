@@ -1,5 +1,6 @@
 package com.expresstemplate.bmicalc;
 
+import static com.best.now.myad.utils.Constant.URL_PRIVACY_POLICY;
 import static com.best.now.myad.utils.PublicHelperKt.isRewarded;
 
 import android.app.Activity;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import com.best.now.myad.WebActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -128,6 +130,13 @@ public class Home extends Activity {
                 Uri uri1 = Uri.parse("https://play.google.com/store/apps/developer?id=" + getString(R.string.more_apps) + Home.this.getPackageName());
                 Intent iv1 = new Intent(Intent.ACTION_VIEW, uri1);
                 startActivity(iv1);
+            }
+        });
+        TextView PrivacyPolicy = findViewById(R.id.PrivacyPolicy);
+        PrivacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WebActivity.Companion.startActivity(Home.this,"Privacy Policy",URL_PRIVACY_POLICY);
             }
         });
     }

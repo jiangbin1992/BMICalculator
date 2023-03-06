@@ -1,17 +1,14 @@
 package com.best.now.autoclick.ui
 
 import android.content.Intent
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.best.now.autoclick.BaseVMActivity
 import com.best.now.autoclick.R
 import com.best.now.autoclick.adapter.GuideAdapter
 import com.best.now.autoclick.adapter.NextClickCallBack
 import com.best.now.autoclick.databinding.ActivityGuideBinding
+import com.best.now.myad.BaseVMActivity
 import com.best.now.myad.ext.putSpValue
 import com.expresstemplate.bmicalc.Home
-import com.expresstemplate.bmicalc.Splash
 
 /**
 author:zhoujingjin

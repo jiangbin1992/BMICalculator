@@ -48,7 +48,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.GuideActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".ui.WebActivity" android:screenOrientation="portrait"/>
     </application>
     <!--适配华为（huawei）刘海屏-->
     <meta-data

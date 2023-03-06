@@ -166,7 +166,6 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     public void showAdIfAvailable() {
         // Only show ad if there is not already an app open ad currently showing
         // and an ad is available.
-        // TODO: 广告一直显示
 //       if (!PublicHelper2.Companion.isPurchased2()){
         if (true){
             if (!isShowingAd && isAdAvailable()) {
