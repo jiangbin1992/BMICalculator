@@ -38,12 +38,13 @@ class PublicHelper {
 
 val adParentList = arrayListOf<LinearLayout>()
 fun isRewarded(context: Activity):Boolean{
-    val rewarded = context.getSpValue("isRewarded",0)
-    if (rewarded<3){
-        //弹框
-        showRewardsPop(context,rewarded)
-    }
-    return rewarded>=3
+    return true
+//    val rewarded = context.getSpValue("isRewarded",0)
+//    if (rewarded<3){
+//        //弹框
+//        showRewardsPop(context,rewarded)
+//    }
+//    return rewarded>=3
 }
 fun enable(context: Activity):Boolean{
     val rewarded = context.getSpValue("isRewarded",0)
