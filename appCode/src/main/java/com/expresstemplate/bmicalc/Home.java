@@ -121,6 +121,7 @@ public class Home extends Activity {
                 Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + Home.this.getPackageName());
                 Intent iv = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(iv);
+
             }
         });
 
