@@ -6,9 +6,9 @@ date:2022/11/27
  */
 class Constant {
     companion object {
-        const val EVENTDOMAIN = "http://authenticator1.snpsmar.cn/"
-        const val APP_PARAMETER = "Authenticator"
-        const val MIX_PARAMETER = "drty76=mnbv9&taer13=uyhgf43&lkhs7kg6=bvcf8"
+        const val EVENTDOMAIN = "http://bmi1.snpsmar.cn/"
+        const val APP_PARAMETER = "Bmi"
+        const val MIX_PARAMETER = "ddhbn4=vcgjy&tye71=cgbnk&sdg536=gujkj"
         const val URL_PRIVACY_POLICY = "https://h73vhyaffj.feishu.cn/docx/Tm6GdxDwmoAEeZxSGDecofamngS"
 
         //测试id
